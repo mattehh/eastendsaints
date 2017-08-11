@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <h1>Admin Dashboard</h1>
+
+    <nav class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['division']">Divisions</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['season']">Seasons</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['team']">Teams</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['schedule']">Schedules</a></li>
+    </nav>
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,29 @@
+ <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" [routerLink]="['/']" fragment="home">East End Saints</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/']" fragment="home" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/schedules']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">SCHEDULES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/stats']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">STATS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/info']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}"
+                    (click)="onAnchorClick()">LEAGUE INFO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/']" fragment="contact" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}"
+                    (click)="onAnchorClick()">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+</nav> 

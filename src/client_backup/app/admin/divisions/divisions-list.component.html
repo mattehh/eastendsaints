@@ -1,0 +1,15 @@
+<h3>Division List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Seasons</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let division of divisions">
+            <td><a [routerLink]="division.id">{{division.name}}</a></td>
+            <td>{{division.seasons}}</td>
+        </tr>
+    </tbody>
+</table>

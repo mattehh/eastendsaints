@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.jumbotron {
+  text-align:center;
+  background:rgba(255,255,255,0.7);
+  margin-top:-25vh;
+}
+
+.card-deck {
+  width:100%;
+}
+
+.card-img-top {
+  height:120px;
+}

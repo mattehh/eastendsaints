@@ -1,0 +1,1071 @@
+<div class="container-fluid" style="padding-top:48px;">
+    <h1>Stats - {{division}}</h1>
+    <div style="margin:10px 0">
+        <button class="btn btn-sm btn-primary" (click)="setDivision('Senior')">Senior</button>
+        <button class="btn btn-sm btn-primary" (click)="setDivision('Double-X')">Double-X</button>
+    </div>
+    <div class="row" *ngIf="division === 'Senior'">
+        <div class="col col-12">
+            <h3>Standings</h3>
+            <table class="table table-sm table-responsive">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Points</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GF/GA Diff.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Roof Chek</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>14</td>
+                        <td>81</td>
+                        <td>64</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>The Black Bear</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>12</td>
+                        <td>77</td>
+                        <td>57</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Chris&#39; Handyman Services</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>62</td>
+                        <td>69</td>
+                        <td>-7</td>
+                    </tr>
+                    <tr>
+                        <td>Lisa Debosky Chevrolet Cadillac</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>53</td>
+                        <td>83</td>
+                        <td>-30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" *ngIf="division === 'Double-X'">
+        <div class="col col-12">
+            <h3>Standings</h3>
+            <table class="table table-sm table-responsive">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Points</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GF/GA Diff.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tyler Marden Contracting</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>20</td>
+                        <td>82</td>
+                        <td>48</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>The Pylons</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>67</td>
+                        <td>56</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Guaranteed Insulation</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>54</td>
+                        <td>59</td>
+                        <td>-5</td>
+                    </tr>
+                    <tr>
+                        <td>Shaw-Street Group</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>1</td>
+                        <td>9</td>
+                        <td>64</td>
+                        <td>71</td>
+                        <td>-7</td>
+                    </tr>
+                    <tr>
+                        <td>The Black Bear</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>49</td>
+                        <td>62</td>
+                        <td>-13</td>
+                    </tr>
+                    <tr>
+                        <td>Right at Home/James Carr</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td>43</td>
+                        <td>63</td>
+                        <td>-20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" *ngIf="division === 'Senior'">
+        <div class="col-12">
+            <h3>Points</h3>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <td colspan="5" class="text-center" style="background:#FF0000; font-weight:bold;">The Black Bear</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Adam Hutchison</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jamie Avery</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Brad Riches</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>TJ Angrove</td>
+                        <td>5</td>
+                        <td>14</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Jason Bradimore</td>
+                        <td>12</td>
+                        <td>5</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Todd Lawson</td>
+                        <td>2</td>
+                        <td>9</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Denys Farrow</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Justin Reeves</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Trevor Crozier</td>
+                        <td>9</td>
+                        <td>7</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="5" class="text-center" style="background:#FFFF00; font-weight:bold;">Roof Chek</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tyler Marden</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tom Speers</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shawn Hutley</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Anthony Delledonne</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Brent Henry</td>
+                        <td>11</td>
+                        <td>6</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tyler Makos</td>
+                        <td>19</td>
+                        <td>14</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Erik Henry</td>
+                        <td>10</td>
+                        <td>16</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Joseph Day</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Derek Smith</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <td colspan="5" class="text-center" style="background:#FFA500; font-weight:bold;">Chris' Handyman Services</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Chris Harris</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>J.D. Butler</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Matthew Jamieson</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Adam Dodsworth</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mark Johnson</td>
+                        <td>9</td>
+                        <td>2</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Tyler Lanzarotta</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Daniel Jamieson</td>
+                        <td>6</td>
+                        <td>11</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Sam Guzzo</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Jesse Taylor</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Mike Burroughs</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>13</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="5" class="text-center" style="background:#008080; font-weight:bold;">Lisa Debosky Chevrolet Cadillac</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dylan Ball</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mike Sterling</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kyle Robinson</td>
+                        <td>6</td>
+                        <td>10</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ben Poynter</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Stew Singleton</td>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Yiorgo Christodoulou</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Tom Reid</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Jake Lawson</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Tyler Robinson</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Mike Tantsis</td>
+                        <td>12</td>
+                        <td>7</td>
+                        <td>19</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" *ngIf="division === 'Double-X'">
+        <div class="col-12">
+            <h3>Points</h3>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#000000; color:white; font-weight:bold;">The Black Bear</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Brandon King</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Justin Reeves</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Chris Dixon</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sam Butler</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Jason Bradimore</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>11</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Shawn Butler</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>11</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Keith Walker</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Cameron Walker</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Jamie Butler</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Brooklyne Macdonald</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Todd Lawson</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>12</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#FFFF00; font-weight:bold;">Guaranteed Insulation</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dylan Ball</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jason Fowlds</td>
+                        <td>11</td>
+                        <td>6</td>
+                        <td>17</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Jake Lawson</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Tom Reid</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Andrew Teng</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>9</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tom Kirton</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aiden Tjin</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Jayar Green</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Liam Boggs</td>
+                        <td>10</td>
+                        <td>5</td>
+                        <td>15</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Mike Beaton</td>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>11</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#FFA500; font-weight:bold;">Pylons</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Richard Potter</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Matt Jamieson</td>
+                        <td>2</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Carolyn Jamieson</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Anthony Delledonne</td>
+                        <td>13</td>
+                        <td>8</td>
+                        <td>21</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Cole Curran</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Annie Nasato</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>12</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Daniel Jamieson</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>18</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Eric Pereira</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Cameron Curran</td>
+                        <td>8</td>
+                        <td>6</td>
+                        <td>14</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#FF0000; font-weight:bold;">Right at Home/James Carr</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ty Beech</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Brad Budway</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kyle Robinson</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>18</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rob Lafrance</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Jim Edison</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Daniel Dunn</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Jake Lafrance</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Deven Edison</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Carter Budway</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>9</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Dawson Budway</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#0000FF; color:white; font-weight:bold;">Shaw-Street Group Ltd.</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Adam Hutchison</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>David Street</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ryan Sharkey</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tyler Sharkey</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Dan Andrews</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Chris Andrews</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Denys Farrow</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Tyler Robinson</td>
+                        <td>14</td>
+                        <td>5</td>
+                        <td>19</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Evan Harrigan</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Kriss Street</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <td colspan="6" class="text-center" style="background:#ADD8E6; font-weight:bold;">Tyler Marden Contracting</td>
+                    </tr>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                        <th>PIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tyler Lanzarotto</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Kyle Sassman</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Shawn Hutley</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>18</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Aaron Stapley</td>
+                        <td>9</td>
+                        <td>2</td>
+                        <td>11</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Tyler Marden</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>11</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Adam Stapley</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>11</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tyler Makos</td>
+                        <td>15</td>
+                        <td>10</td>
+                        <td>25</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Derek Smith</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Dave Genys</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Kevin Bell</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Scott Schoeneau</td>
+                        <td>12</td>
+                        <td>7</td>
+                        <td>19</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
