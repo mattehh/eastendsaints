@@ -10,13 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { SchedulesModule } from './schedules/schedules.module';
 import { StatsModule } from './stats/stats.module';
-import { RulesModule } from './rules/rules.module';
+import { LeagueInfoModule } from './leagueinfo/leagueinfo.module';
 import { AdminModule } from './admin/admin.module';
 import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, SharedModule, HomeModule, SchedulesModule, StatsModule, RulesModule, AdminModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, HomeModule, SchedulesModule, StatsModule, LeagueInfoModule, AdminModule],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 /**
@@ -11,7 +11,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['toolbar.component.css']
 })
 export class ToolbarComponent {
-  constructor(private route: ActivatedRoute) { }
+  private isShrunk: boolean = false;
+  private slideOut: boolean = false;
+
+  constructor(private route: ActivatedRoute, zone: NgZone) {
+    window.onscroll = () => {
+      zone.run(() => {
+        if(window.pageYOffset > 60) {
+          this.isShrunk = true;
+        } else {
+          this.isShrunk = false;
+        }
+      });
+    }
+  }
 
   onAnchorClick() {
     this.route.fragment.subscribe(f => {

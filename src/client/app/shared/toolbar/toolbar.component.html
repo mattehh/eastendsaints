@@ -1,29 +1,37 @@
- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<nav id="mainNav" style="margin-bottom:15px" class="navbar fixed-top navbar-toggleable-md navbar-inverse" [ngClass]="{'header_nav--big':!isShrunk, 'header_nav--small':isShrunk, 'slideout':slideOut}">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <a class="navbar-brand" [routerLink]="['/']" fragment="home">East End Saints</a>
+    <a class="brand" [routerLink]="['/']" fragment="home"><img src="../assets/images/EES_Logo.png"></a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <a class="nav-link" [routerLink]="['/']" fragment="home" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <a class="nav-link" [routerLink]="['/schedules']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">SCHEDULES</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <a class="nav-link" [routerLink]="['/stats']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">STATS</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/info']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}"
-                    (click)="onAnchorClick()">LEAGUE INFO</a>
+            <li class="nav-item dropdown" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                        LEAGUE INFO
+                      </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/rules']">Rules</a>
+                    <a class="dropdown-item" [routerLink]="['/faq']">FAQ</a>
+                    <a class="dropdown-item" [routerLink]="['/partners']">Partners</a>
+                </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                 <a class="nav-link" [routerLink]="['/']" fragment="contact" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}"
                     (click)="onAnchorClick()">CONTACT</a>
             </li>
         </ul>
     </div>
-</nav> 
+</nav>
+<!-- <div *ngIf="isShrunk" style="position:relative;display:block;height:116px;margin-bottom:15px;"></div> -->

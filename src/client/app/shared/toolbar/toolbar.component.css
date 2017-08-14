@@ -1,23 +1,53 @@
-:host {
-  background-color: #106cc8;
-  color: rgba(255, 255, 255, 0.87);
-  display: block;
-  height: 48px;
-  padding: 0 16px;
+@media (max-width:768px) {
+    .brand {
+        text-align:center;
+    }
+
+    .header_nav--small .brand {
+        text-align:left;
+    }
 }
 
-h1 {
-  display: inline;
-  font-size: 20px;
-  font-weight: normal;
-  letter-spacing: 0.1px;
-  line-height: 48px;
+.header_nav--big img {
+    height: 100px;
+    transition: .2s;
 }
 
-.more {
-  background: url("./assets/svg/more.svg");
-  float: right;
-  height: 24px;
-  margin-top: 12px;
-  width: 24px;
+.header_nav--small img {
+    height:40px;
+    transition: .2s;
 }
+
+.navbar {
+    background:#222;
+}
+
+/*
+.header_nav--big .slideout { 
+    position: fixed;
+}
+
+.slideout {
+    top:-56px;
+}
+
+.slideout img {
+    height:40px;
+}
+
+.header_nav--big {
+    position: relative;
+}
+
+.header_nav--big img {
+    height:100px;
+}
+
+.navbar {
+    background:#222222;
+}
+
+.header_nav--small {
+    transform: translateY(56px);
+    transition: .4s ease-in;
+}*/
