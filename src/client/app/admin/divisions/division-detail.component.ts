@@ -13,7 +13,7 @@ export class DivisionDetailComponent implements OnInit {
     id: number;
     division: any;
 
-    constructor(private route: ActivatedRoute, private adminService: AdminService) { 
+    constructor(private route: ActivatedRoute, private adminService: AdminService) {
         this.route.params.subscribe(params => {
             this.id = +params['id'];
         });

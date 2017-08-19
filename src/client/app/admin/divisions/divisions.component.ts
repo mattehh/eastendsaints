@@ -27,7 +27,7 @@ export class DivisionsComponent implements OnInit {
     submitForm() {
         console.log(this.form.controls.name);
         this.adminService.addDivision(this.form.value).subscribe(result => {
-            console.log("Success!");
+            console.log('Success!');
         });
     }
 }

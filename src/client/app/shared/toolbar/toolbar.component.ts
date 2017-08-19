@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['toolbar.component.css']
 })
 export class ToolbarComponent {
-  private isShrunk: boolean = false;
-  private slideOut: boolean = false;
+  isShrunk: boolean = false;
+  slideOut: boolean = false;
 
   constructor(private route: ActivatedRoute, zone: NgZone) {
     window.onscroll = () => {
@@ -23,13 +23,13 @@ export class ToolbarComponent {
           this.isShrunk = false;
         }
       });
-    }
+    };
   }
 
   onAnchorClick() {
     this.route.fragment.subscribe(f => {
-      const element = document.querySelector("#" + f)
-      if (element) element.scrollIntoView(true)
+      const element = document.querySelector('#' + f);
+      if (element) element.scrollIntoView(true);
     });
   }
 }

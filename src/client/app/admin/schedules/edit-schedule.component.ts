@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,10 +7,15 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: 'edit-schedule.component.html',
     styleUrls: ['edit-schedule.component.css'],
 })
-export class EditScheduleComponent {
+export class EditScheduleComponent implements OnDestroy, OnInit {
     sub: any;
     id: any;
-    teams = [{ name: 'The Pylons', id: 1 }, { name: 'The Black Bear', id: 2 }, { name: 'Roofchek', id: 3 }, { name: 'Tyler Marden Contracting', id: 4 }];
+    teams = [
+        { name: 'The Pylons', id: 1 },
+        { name: 'The Black Bear', id: 2 },
+        { name: 'Roofchek', id: 3 },
+        { name: 'Tyler Marden Contracting', id: 4 }
+    ];
 
     constructor(private route: ActivatedRoute) { }
 

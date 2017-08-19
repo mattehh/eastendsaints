@@ -1,4 +1,4 @@
-<h3>Schedule {{id}}</h3>
+<h3>Schedule {{ id }}</h3>
 
 <form>
     <table class="table">
@@ -20,14 +20,14 @@
                 <td>
                     <select class="form-control">
                         <option selected disabled value="">Team 1</option>
-                        <option *ngFor="let team of teams" value="{{team.id}}">{{team.name}}</option>
+                        <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
                     </select>
                 </td>
                 <td>vs</td>
                 <td>
                     <select class="form-control">
                         <option selected disabled value="">Team 1</option>
-                        <option *ngFor="let team of teams" value="{{team.id}}">{{team.name}}</option>
+                        <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
                     </select>
                 </td>
                 <td>

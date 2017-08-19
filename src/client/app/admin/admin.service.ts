@@ -13,7 +13,7 @@ export class AdminService {
     constructor(private http: Http) { }
 
     addDivision(value: any) {
-        return this.http.post(Config.API + "api.php/division", value);
+        return this.http.post(Config.API + 'api.php/division', value);
     }
 
     getDivision(id: number): any {
@@ -21,6 +21,6 @@ export class AdminService {
     }
 
     getDivisions(): any {
-        return this.http.get(Config.API + "api.php/division?transform=1").map(res => res.json()['division']);
+        return this.http.get(Config.API + 'api.php/division?transform=1').map(res => res.json()['division']);
     }
 }

@@ -21,9 +21,35 @@ import { SchedulesComponent } from './schedules/schedules.component';
 import { EditScheduleComponent } from './schedules/edit-schedule.component';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpModule, AdminRoutingModule],
-    declarations: [AdminComponent, DivisionsComponent, DivisionsListComponent, DivisionDetailComponent, SeasonsComponent, TeamsComponent, SchedulesComponent, EditScheduleComponent],
-    exports: [AdminComponent, DivisionsComponent, DivisionsListComponent, DivisionDetailComponent, SeasonsComponent, TeamsComponent, SchedulesComponent, EditScheduleComponent],
-    providers: [AdminService]
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        AdminRoutingModule
+    ],
+    declarations: [
+        AdminComponent,
+        DivisionsComponent,
+        DivisionsListComponent,
+        DivisionDetailComponent,
+        SeasonsComponent,
+        TeamsComponent,
+        SchedulesComponent,
+        EditScheduleComponent
+    ],
+    exports: [
+        AdminComponent,
+        DivisionsComponent,
+        DivisionsListComponent,
+        DivisionDetailComponent,
+        SeasonsComponent,
+        TeamsComponent,
+        SchedulesComponent,
+        EditScheduleComponent
+    ],
+    providers: [
+        AdminService
+    ]
 })
 export class AdminModule { }

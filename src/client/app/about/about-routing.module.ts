@@ -4,9 +4,7 @@ import { AboutComponent } from './about.component';
 
 @NgModule({
   imports: [
-    RouterModule.forChild([
-    
-    ])
+    RouterModule.forChild([])
   ],
   exports: [RouterModule]
 })
