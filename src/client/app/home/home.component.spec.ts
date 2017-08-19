@@ -17,9 +17,7 @@ export function main() {
       TestBed.configureTestingModule({
         imports: [FormsModule],
         declarations: [HomeComponent],
-        providers: [
-          { provide: NameListService, useValue: new MockNameListService() }
-        ]
+        providers: []
       });
 
     });
@@ -32,39 +30,12 @@ export function main() {
             let fixture = TestBed.createComponent(HomeComponent);
             let homeInstance = fixture.debugElement.componentInstance;
             let homeDOMEl = fixture.debugElement.nativeElement;
-            let mockNameListService =
-              fixture.debugElement.injector.get<any>(NameListService) as MockNameListService;
-            let nameListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
-
-            mockNameListService.returnValue = ['1', '2', '3'];
 
             fixture.detectChanges();
 
-            expect(homeInstance.nameListService).toEqual(jasmine.any(MockNameListService));
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(3);
-            expect(nameListServiceSpy.calls.count()).toBe(1);
-
-            homeInstance.newName = 'Minko';
-            homeInstance.addName();
-
-            fixture.detectChanges();
-
-            expect(homeDOMEl.querySelectorAll('li').length).toEqual(4);
-            expect(homeDOMEl.querySelectorAll('li')[3].textContent).toEqual('Minko');
+            expect(homeDOMEl.querySelectorAll('.jumbotron').length).toEqual(1);
           });
 
       }));
   });
-}
-
-class MockNameListService {
-
-  returnValue: string[];
-
-  get(): Observable<string[]> {
-    return Observable.create((observer: any) => {
-      observer.next(this.returnValue);
-      observer.complete();
-    });
-  }
 }
