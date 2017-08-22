@@ -4,30 +4,40 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AdminService } from '../admin.service';
 
 @Component({
-    moduleId: module.id,
-    selector: 'ees-admin-divisions',
-    templateUrl: 'divisions.component.html',
-    styleUrls: ['divisions.component.css'],
+  moduleId: module.id,
+  selector: 'ees-admin-divisions',
+  templateUrl: 'divisions.component.html',
+  styleUrls: ['divisions.component.css'],
 })
 export class DivisionsComponent implements OnInit {
-    form: FormGroup;
+  form: FormGroup;
+  divisions: any[] = [];
 
-    constructor(private fb: FormBuilder, private adminService: AdminService) { }
+  constructor(private fb: FormBuilder, private adminService: AdminService) { }
 
-    ngOnInit() {
-        this.createForm();
-    }
+  ngOnInit() {
+    this.createForm();
+    this.getDivisions();
+  }
 
-    createForm() {
-        this.form = this.fb.group({
-            'name': ['', Validators.required]
-        });
-    }
+  createForm() {
+    this.form = this.fb.group({
+      'name': ['', Validators.required]
+    });
+  }
 
-    submitForm() {
-        console.log(this.form.controls.name);
-        this.adminService.addDivision(this.form.value).subscribe(result => {
-            console.log('Success!');
-        });
-    }
+  submitForm() {
+    this.adminService.addDivision(this.form.value).subscribe(result => {
+      this.getDivisions();
+      this.form.reset();
+    }, (error) => {
+      console.log(error);
+    });
+  }
+
+  getDivisions() {
+    this.adminService.getDivisions().subscribe(divisions => {
+      this.divisions = divisions;
+    });
+  }
 }

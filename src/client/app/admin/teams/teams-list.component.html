@@ -1,0 +1,21 @@
+<h3>Teams List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Season</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of teams">
+      <td><a [routerLink]="team.id">{{ team.name }}</a></td>
+      <td>
+        <svg style="display:block;height:25px;width:100%;">
+          <rect x="0" y="0" width="50" height="25" [style.fill]="team.color" />
+        </svg>
+      </td>
+      <td>{{ team.season_id }}</td>
+    </tr>
+  </tbody>
+</table>

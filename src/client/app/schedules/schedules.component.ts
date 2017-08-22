@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NameListService } from '../shared/name-list/name-list.service';
 
 @Component({
   moduleId: module.id,

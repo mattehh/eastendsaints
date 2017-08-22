@@ -1,0 +1,17 @@
+<h3>Season History</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Division</th>
+            <th>Active?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let season of seasons">
+            <td><a [routerLink]="season.id">{{ season.name }}</a></td>
+            <td>{{ season.division_id }}</td>
+            <td>{{ season.active }}</td>
+        </tr>
+    </tbody>
+</table>

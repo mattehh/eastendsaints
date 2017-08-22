@@ -4,26 +4,21 @@ import { ActivatedRoute } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
-    moduleId: module.id,
-    selector: 'ees-admin-division-detail',
-    templateUrl: 'division-detail.component.html',
-    styleUrls: ['division-detail.component.css'],
+  moduleId: module.id,
+  selector: 'ees-admin-division-detail',
+  templateUrl: 'division-detail.component.html',
+  styleUrls: ['division-detail.component.css'],
 })
 export class DivisionDetailComponent implements OnInit {
-    id: number;
-    division: any;
+  division: any;
 
-    constructor(private route: ActivatedRoute, private adminService: AdminService) {
-        this.route.params.subscribe(params => {
-            this.id = +params['id'];
-        });
-    }
+  constructor(private route: ActivatedRoute, private adminService: AdminService) {}
 
-    ngOnInit() {
-        this.getDivision();
-    }
+  ngOnInit() {
+    this.route.paramMap.subscribe(p => this.getDivision(p.has('id') && +p.get('id')));
+  }
 
-    getDivision() {
-        return this.adminService.getDivision(this.id).subscribe(division => this.division = division);
-    }
+  getDivision(id: number) {
+    return this.adminService.getDivision(id).subscribe(division => this.division = division);
+  }
 }

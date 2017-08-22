@@ -1,77 +1,41 @@
 <h2>Season Management</h2>
 <hr />
 <div class="row">
-    <div class="col-6">
-        <h3>Add Season</h3>
-        <form class="form" style="margin-bottom:20px;">
-            <div class="form-group">
-                <label class="control-label" for="name">Season Name</label>
-                <input class="form-control" type="text">
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="division">Division</label>
-                <select class="form-control">
-                    <option selected disabled value="">Select a Division...</option>
-                    <option *ngFor="let division of divisions" value="{{ division.id }}">{{ division.name }}</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-6">
-                        <label class="control-label" for="start">Start</label>
-                        <input class="form-control" type="text">
-                    </div>
-                    <div class="col-6">
-                        <label class="control-label" for="end">End</label>
-                        <input class="form-control" type="text">
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary" type="Submit">Add Season</button>
-        </form>
-    </div>
-</div>
-<div class="row">
-    <div class="col-6">
-        <h3>Active Seasons</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Division</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let season of activeSeasons">
-                    <td>{{ season.name }}</td>
-                    <td>{{ season.division }}</td>
-                    <td>{{ season.start }}</td>
-                    <td>{{ season.end }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-6">
-        <h3>Season History</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Division</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let season of seasonHistory">
-                    <td>{{ season.name }}</td>
-                    <td>{{ season.division }}</td>
-                    <td>{{ season.start }}</td>
-                    <td>{{ season.end }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="col-sm-6" style="margin-bottom:20px;">
+    <h3>Add Season</h3>
+    <form class="form" [formGroup]="form" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label class="control-label" for="name">Season Name</label>
+        <input class="form-control" type="text" formControlName="name">
+        <div *ngIf="!form.controls.name.valid && form.controls.name.touched" class="alert alert-danger">A season name is required</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="division_id">Division</label>
+        <select class="form-control" formControlName="division_id">
+            <option selected disabled value="">Select a Division...</option>
+            <option *ngFor="let division of divisions" [value]="division.id">{{ division.name }}</option>
+        </select>
+        <div *ngIf="!form.controls.division_id.valid && form.controls.division_id.touched" class="alert alert-danger">A division is required</div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-6" style="margin-bottom:10px;">
+            <label class="control-label" for="start_date">Start</label>
+            <input class="form-control" type="text" formControlName="start_date" placeholder="yyyy-mm-dd">
+            <div *ngIf="!form.controls.start_date.valid && form.controls.start_date.touched" class="alert alert-danger">A start date is required</div>
+          </div>
+          <div class="col-sm-6" style="margin-bottom:10px;">
+            <label class="control-label" for="end_date">End</label>
+            <input class="form-control" type="text" formControlName="end_date" placeholder="yyyy-mm-dd">
+            <div *ngIf="!form.controls.end_date.valid && form.controls.end_date.touched" class="alert alert-danger">An end date is required</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="!form.valid" type="Submit">Add Season</button>
+    </form>
+  </div>
+
+  <div class="col-sm-6" style="margin-bottom:20px;">
+    <ees-admin-seasons-list [seasons]="seasons"></ees-admin-seasons-list>
+  </div>
 </div>
