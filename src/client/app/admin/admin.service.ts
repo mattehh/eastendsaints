@@ -39,4 +39,12 @@ export class AdminService {
   getTeams() {
     return this.http.get(Config.API + 'team?transform=1').map(res => res.json()['team']);
   }
+
+  addGames(value: any[]) {
+    return this.http.post(Config.API + 'game', value);
+  }
+
+  getGames() {
+    return this.http.get(Config.API + 'game?transform=1').map(res => res.json()['game']);
+  }
 }

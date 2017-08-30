@@ -150,14 +150,17 @@
     "@angular/platform-browser-dynamic": "^4.3.0",
     "@angular/router": "^4.3.0",
     "@angular/service-worker": "^1.0.0-beta.16",
+    "@types/lodash": "^4.14.74",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "intl": "^1.2.5",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "roboto-fontface": "^0.7.0",
     "rxjs": "^5.4.2",
     "systemjs": "0.20.14",
-    "zone.js": "0.8.12",
-    "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "roboto-fontface": "^0.7.0"
+    "zone.js": "0.8.12"
   }
 }

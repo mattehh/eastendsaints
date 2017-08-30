@@ -1,39 +1,66 @@
-<h3>Schedule {{ id }}</h3>
+<h3>{{ season?.name }} Schedule</h3>
 
-<form>
-    <table class="table">
-        <thead></thead>
-        <tbody></tbody>
-        <tfoot>
-            <tr>
-                <td>
-                    <input class="form-control" type="date">
-                </td>
-                <td>
-                    <select class="form-control">
-                        <option selected disabled value="">Time</option>
-                        <option>7:00</option>
-                        <option>8:00</option>
-                        <option>9:00</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="form-control">
-                        <option selected disabled value="">Team 1</option>
-                        <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
-                    </select>
-                </td>
-                <td>vs</td>
-                <td>
-                    <select class="form-control">
-                        <option selected disabled value="">Team 1</option>
-                        <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
-                    </select>
-                </td>
-                <td>
-                    <button class="btn btn-primary" type="submit">Add</button>
-                </td>   
-            </tr>
-        </tfoot>
-    </table>
-</form>
+
+<table class="table table-sm" style="text-align:center;">
+  <thead>
+    <tr>
+      <th class="text-center">Time</th>
+      <th class="text-center">Team 1</th>
+      <th class="text-center">Team 2</th>
+    </tr>
+  </thead>
+  <tfoot *ngIf="games.length > 0">
+    <tr>
+      <td colspan="3"><button class="btn btn-primary" (click)="saveSchedule()">Save Schedule</button></td>
+    </tr>
+  </tfoot>
+  <tbody *ngIf="games.length === 0">
+    <tr>
+      <td colspan="3">No games in this schedule</td>
+    </tr>
+    <tr>
+      <td colspan="3"><button class="btn btn-default" (click)="generateInitialSchedule()">Generate Schedule</button></td>
+    </tr>
+  </tbody>
+  <tbody *ngFor="let game of games; let i = index">
+    <tr>
+      <td *ngIf="i % (teams.length/2) == 0" colspan="3" style="font-weight:bold; border-bottom:2px solid black; padding-top:10px;">{{ game.play_time | date }}</td>
+    </tr>
+    <tr>
+      <td>{{ game.play_time | date:'shortTime'}}</td>
+      <td>{{ game.home }}</td>
+      <td>{{ game.away }}</td>
+    </tr>
+  </tbody>
+  <!-- <tfoot>
+      <tr>
+        <td>
+          <input class="form-control" type="date">
+        </td>
+        <td>
+          <select class="form-control">
+            <option selected disabled value="">Time</option>
+            <option>7:00</option>
+            <option>8:00</option>
+            <option>9:00</option>
+          </select>
+        </td>
+        <td>
+          <select class="form-control">
+            <option selected disabled value="">Team 1</option>
+            <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
+          </select>
+        </td>
+        <td>vs</td>
+        <td>
+          <select class="form-control">
+            <option selected disabled value="">Team 2</option>
+            <option *ngFor="let team of teams" value="{{ team.id }}">{{ team.name }}</option>
+          </select>
+        </td>
+        <td>
+          <button class="btn btn-primary" type="submit">Add</button>
+        </td>
+      </tr>
+    </tfoot> -->
+</table>

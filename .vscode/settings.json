@@ -3,7 +3,6 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "search.exclude": {
     "**/coverage_js": true,
-    "**/coverage": true,
-    "**/dist": true
+    "**/coverage": true
   }
 }
